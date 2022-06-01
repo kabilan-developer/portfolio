@@ -16,7 +16,7 @@ export const servicesData = [
     //     icon: <BiShoppingBag/>
     // },
     {
-        id: 6,
+        id: 1,
         title: 'Web Design',
         icon: <BsCodeSlash />
     },
@@ -36,7 +36,7 @@ export const servicesData = [
     //     icon: <FaInternetExplorer />
     // },
     {
-        id: 5,
+        id: 4,
         title: 'Online Tutoring',
         icon: <FaChalkboardTeacher />
     },
