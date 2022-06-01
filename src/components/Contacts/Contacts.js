@@ -20,12 +20,15 @@ import {
 import { AiOutlineSend, AiOutlineCheckCircle } from 'react-icons/ai';
 import { FiPhone, FiAtSign } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { AiOutlineWhatsApp } from 'react-icons/ai';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { socialsData } from '../../data/socialsData';
 import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
+import ReactWhatsapp from 'react-whatsapp';
+
 
 function Contacts() {
     const [open, setOpen] = useState(false);
@@ -132,32 +135,32 @@ function Contacts() {
     const handleContactForm = (e) => {
         e.preventDefault();
 
-        if (name && email && message) {
-            if (isEmail(email)) {
-                const responseData = {
-                    name: name,
-                    email: email,
-                    message: message,
-                };
+        // if (name && email && message) {
+        //     if (isEmail(email)) {
+        //         const responseData = {
+        //             name: name,
+        //             email: email,
+        //             message: message,
+        //         };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
-                    console.log('success');
-                    setSuccess(true);
-                    setErrMsg('');
+        //         axios.post(contactsData.sheetAPI, responseData).then((res) => {
+        //             console.log('success');
+        //             setSuccess(true);
+        //             setErrMsg('');
 
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                    setOpen(false);
-                });
-            } else {
-                setErrMsg('Invalid email');
-                setOpen(true);
-            }
-        } else {
-            setErrMsg('Enter all the fields');
-            setOpen(true);
-        }
+        //             setName('');
+        //             setEmail('');
+        //             setMessage('');
+        //             setOpen(false);
+        //         });
+        //     } else {
+        //         setErrMsg('Invalid email');
+        //         setOpen(true);
+        //     }
+        // } else {
+        //     setErrMsg('Enter all the fields');
+        //     setOpen(true);
+        // }
     };
 
     return (
@@ -169,7 +172,7 @@ function Contacts() {
             <div className='contacts--container'>
                 <h1 style={{ color: theme.primary }}>Contacts</h1>
                 <div className='contacts-body'>
-                    {/* <div className='contacts-form'>
+                    <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
                             <div className='input-container'>
                                 <label htmlFor='Name' className={classes.label}>
@@ -218,13 +221,14 @@ function Contacts() {
                             </div>
 
                             <div className='submit-btn'>
-                                <button
+                            <ReactWhatsapp className={classes.submitBtn} number="+919965934977" message={name}>
+                                {/* <button
                                     type='submit'
                                     className={classes.submitBtn}
-                                >
-                                    <p>{!success ? 'Send' : 'Sent'}</p>
+                                > */}
+                                    <p>Send</p>
                                     <div className='submit-icon'>
-                                        <AiOutlineSend
+                                        <AiOutlineWhatsApp
                                             className='send-icon'
                                             style={{
                                                 animation: !success
@@ -235,7 +239,7 @@ function Contacts() {
                                                     : 'initial',
                                             }}
                                         />
-                                        <AiOutlineCheckCircle
+                                        <AiOutlineWhatsApp
                                             className='success-icon'
                                             style={{
                                                 display: !success
@@ -245,7 +249,8 @@ function Contacts() {
                                             }}
                                         />
                                     </div>
-                                </button>
+                                {/* </button> */}
+                                </ReactWhatsapp>
                             </div>
                         </form>
                         <Snackbar
@@ -278,11 +283,11 @@ function Contacts() {
                                 message={errMsg}
                             />
                         </Snackbar>
-                    </div> */}
+                    </div>
 
                     <div className='contacts-details'>
                         <a
-                            // href={`mailto:${contactsData.email}`}
+                            href={`mailto:${contactsData.email}`}
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
@@ -293,7 +298,7 @@ function Contacts() {
                             </p>
                         </a>
                         <a
-                            // href={`tel:${contactsData.phone}`}
+                            href={`tel:${contactsData.phone}`}
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
@@ -343,7 +348,7 @@ function Contacts() {
                                     <FaLinkedinIn aria-label='LinkedIn' />
                                 </a>
                             )}
-                            {/* {socialsData.instagram && (
+                            {socialsData.instagram && (
                                 <a
                                     href={socialsData.instagram}
                                     target='_blank'
@@ -352,7 +357,7 @@ function Contacts() {
                                 >
                                     <FaInstagram aria-label='Instagram' />
                                 </a>
-                            )}*/}
+                            )}
                             {socialsData.medium && (
                                 <a
                                     href={socialsData.medium}

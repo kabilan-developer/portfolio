@@ -74,6 +74,8 @@ import unity from '../assets/svg/skills/unity.svg'
 import wolframalpha from '../assets/svg/skills/wolframalpha.svg'
 
 import canva from '../assets/svg/skills/canva.svg'
+import redux from '../assets/svg/skills/redux.svg'
+import github from '../assets/svg/skills/github.svg'
 
 
 export const skillsImage = (skill) => {
@@ -227,6 +229,10 @@ export const skillsImage = (skill) => {
             return wolframalpha;
         case 'canva':
             return canva;
+        case 'redux':
+            return redux;
+        case 'github':
+            return github;
         default:
             break;
     }

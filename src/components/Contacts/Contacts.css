@@ -120,8 +120,8 @@
 }
 .send-icon {
     font-size: 25px;
-    transform-origin: center;
-    transform: translate(5px,-3px) rotate(-30deg);
+    /* transform-origin: center;
+    transform: translate(5px,-3px) rotate(-30deg); */
 }
 
 .success-icon {

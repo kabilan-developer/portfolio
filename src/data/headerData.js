@@ -1,9 +1,9 @@
 import resume from '../assets/pdf/resume.pdf'
-
+import profileImg from '../assets/png/profileImg.jpg'
 export const headerData = {
-    name: 'Sreerag Rajan',
-    title: "Web Developer",
-    desciption:"Life may be a meandering path but don't worry about it, rather enjoy it. It is about the journey, not the destination so explore all that comes your way, learn and grow from it, for this journey only happens once.",
-    image: 'https://avatars.githubusercontent.com/u/85482640?v=4',
+    name: 'Kabilan',
+    title: "Software Developer",
+    desciption:"Front End Developer, who is responsible for developing interactive, responsive, dynamic user interfaces of websites, web applications and mobile applications",
+    image: profileImg,
     resumePdf: resume
 }

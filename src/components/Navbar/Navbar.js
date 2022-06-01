@@ -6,6 +6,10 @@ import { HiDocumentText } from 'react-icons/hi';
 import { BsFillGearFill } from 'react-icons/bs';
 import { MdPhone } from 'react-icons/md';
 import { FaUser, FaFolderOpen } from 'react-icons/fa';
+import { GiSkills } from 'react-icons/gi';
+import { RiChatHistoryFill } from 'react-icons/ri';
+import { MdMiscellaneousServices } from 'react-icons/md';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
@@ -55,7 +59,7 @@ function Navbar() {
             fontFamily: ' var(--primaryFont)',
             fontStyle: ' normal',
             fontWeight: ' normal',
-            fontSize: ' 24px',
+            fontSize: ' 26px',
             background: theme.secondary,
             overflow: 'hidden',
             borderTopRightRadius: '40px',
@@ -87,7 +91,7 @@ function Navbar() {
             background: theme.secondary,
             color: theme.primary,
             width: '85%',
-            height: '60px',
+            height: '40px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-evenly',
@@ -217,17 +221,17 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#education'
+                                to='/#skills'
                                 smooth={true}
                                 spy='true'
                                 duration={2000}
                             >
                                 <div className={classes.drawerItem}>
-                                    <HiDocumentText
+                                    <GiSkills
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        Education
+                                        Skills
                                     </span>
                                 </div>
                             </NavLink>
@@ -235,17 +239,17 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#skills'
+                                to='/#experience'
                                 smooth={true}
                                 spy='true'
                                 duration={2000}
                             >
                                 <div className={classes.drawerItem}>
-                                    <BsFillGearFill
+                                    <RiChatHistoryFill
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        Skills
+                                        Experience
                                     </span>
                                 </div>
                             </NavLink>
@@ -264,6 +268,42 @@ function Navbar() {
                                     />
                                     <span className={classes.drawerLinks}>
                                         Projects
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                            <NavLink
+                                to='/#education'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <HiDocumentText
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Education
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                            <NavLink
+                                to='/#services'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <MdMiscellaneousServices
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Services
                                     </span>
                                 </div>
                             </NavLink>
