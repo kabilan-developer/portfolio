@@ -190,7 +190,7 @@ function Navbar() {
                                 to='/'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <IoHomeSharp
@@ -208,7 +208,7 @@ function Navbar() {
                                 to='/#about'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <FaUser className={classes.drawerIcon} />
@@ -224,7 +224,7 @@ function Navbar() {
                                 to='/#skills'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <GiSkills
@@ -242,7 +242,7 @@ function Navbar() {
                                 to='/#experience'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <RiChatHistoryFill
@@ -260,7 +260,7 @@ function Navbar() {
                                 to='/#projects'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <FaFolderOpen
@@ -278,7 +278,7 @@ function Navbar() {
                                 to='/#education'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <HiDocumentText
@@ -296,7 +296,7 @@ function Navbar() {
                                 to='/#services'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <MdMiscellaneousServices
@@ -314,7 +314,7 @@ function Navbar() {
                                 to='/#contacts'
                                 smooth={true}
                                 spy='true'
-                                duration={2000}
+                                duration={1000}
                             >
                                 <div className={classes.drawerItem}>
                                     <MdPhone className={classes.drawerIcon} />
