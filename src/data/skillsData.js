@@ -6,7 +6,7 @@
     'Javascript',
     'React',
     'Redux',
-    'Next js',
+    'MaterialUI',
     'Github',
     'Photoshop',
     
